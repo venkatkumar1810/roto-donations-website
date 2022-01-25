@@ -37,6 +37,10 @@ app.get('/', (req, res) => {
     res.render('home.ejs');
 })
 
+app.get('/orgs', (req, res) => {
+    res.render('organizations/index.ejs');
+})
+
 
 app.all('*', (req, res, next) => {
     next(new ExpressError('Page Not Found', 404));
